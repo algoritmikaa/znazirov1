@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DreamDrive — эксклюзивные премиум и luxury автомобили 2026">
+    <title>DreamDrive • Найди свою мечту на колёсах</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <!-- Логотип -->
+            <div class="logo">
+                <span class="logo-text">DreamDrive</span>
+            </div>
+
+            <!-- Меню для десктопа -->
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#hero" class="nav-link">Главная</a></li>
+                <li><a href="#popular" class="nav-link">Автомобили</a></li>
+                <li><a href="#why" class="nav-link">О нас</a></li>
+                <li><a href="#reviews" class="nav-link">Отзывы</a></li>
+                <li><a href="#contact" class="nav-link">Контакты</a></li>
+            </ul>
+
+            <!-- Действия -->
+            <div class="nav-actions">
+                <a href="#contact" class="btn-buy">Купить в 1 клик</a>
+                
+                <!-- Переключатель темы -->
+                <button id="theme-toggle" class="theme-toggle" aria-label="Переключить тему">
+                    <span class="sun">☀️</span>
+                    <span class="moon">🌙</span>
+                </button>
+            </div>
+
+            <!-- Бургер-меню -->
+            <button class="burger" id="burger" aria-label="Открыть меню">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header id="hero" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-bg" id="hero-bg"></div>
+        
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Найди свою<br>мечту на колёсах</h1>
+                <p class="hero-subtitle">Премиум и luxury автомобили 2026 года.<br>Эксклюзив. Комфорт. Будущее уже здесь.</p>
+                
+                <div class="hero-buttons">
+                    <a href="#popular" class="btn-primary hero-btn">Смотреть каталог</a>
+                    <a href="#contact" class="btn-secondary hero-btn">Рассчитать кредит</a>
+                </div>
+                
+                <div class="hero-trust">
+                    <div class="trust-item">✓ Более 1200 счастливых владельцев</div>
+                    <div class="trust-item">✓ Официальные дилеры Mercedes, BMW, Porsche, Tesla</div>
+                    <div class="trust-item">✓ Гарантия 5 лет</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Параллакс-декор -->
+        <div class="hero-scroll-hint">
+            <span>Прокрутите вниз</span>
+            <div class="scroll-arrow">↓</div>
+        </div>
+    </header>
+
+    <!-- ПОПУЛЯРНЫЕ МОДЕЛИ -->
+    <section id="popular" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Популярные модели</h2>
+                <p class="section-subtitle">Выберите свой идеальный автомобиль из коллекции 2026 года</p>
+            </div>
+
+            <div class="cars-grid" id="cars-grid">
+                <!-- Карточка 1 -->
+                <div class="car-card glass animate-on-scroll">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70" alt="Mercedes-Benz S-Class" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-brand">Mercedes-Benz</div>
+                        <h3 class="card-title">S-Class S 500 4MATIC</h3>
+                        <p class="card-desc">Воплощение роскоши и инноваций. Гибридный двигатель 2026</p>
+                        <div class="card-price">от 18 900 000 ₽</div>
+                        <button class="btn-detail" onclick="showDetail(1)">Подробнее →</button>
+                    </div>
+                </div>
+
+                <!-- Карточка 2 -->
+                <div class="car-card glass animate-on-scroll">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1550355291-bbee04a920a1" alt="BMW 7 Series" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-brand">BMW</div>
+                        <h3 class="card-title">i7 xDrive60</h3>
+                        <p class="card-desc">Электрический флагман с Crystal Headlights и 650 км запаса хода</p>
+                        <div class="card-price">от 16 800 000 ₽</div>
+                        <button class="btn-detail" onclick="showDetail(2)">Подробнее →</button>
+                    </div>
+                </div>
+
+                <!-- Карточка 3 -->
+                <div class="car-card glass animate-on-scroll">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d" alt="Porsche 911" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-brand">Porsche</div>
+                        <h3 class="card-title">911 Turbo S</h3>
+                        <p class="card-desc">Икона скорости. 650 л.с. и 0-100 км/ч за 2,7 секунды</p>
+                        <div class="card-price">от 24 500 000 ₽</div>
+                        <button class="btn-detail" onclick="showDetail(3)">Подробнее →</button>
+                    </div>
+                </div>
+
+                <!-- Карточка 4 -->
+                <div class="car-card glass animate-on-scroll">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1592198084033-a0f6f5b4c8b4" alt="Tesla Model S Plaid" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-brand">Tesla</div>
+                        <h3 class="card-title">Model S Plaid</h3>
+                        <p class="card-desc">Самый быстрый серийный седан в мире. 1020 л.с.</p>
+                        <div class="card-price">от 14 900 000 ₽</div>
+                        <button class="btn-detail" onclick="showDetail(4)">Подробнее →</button>
+                    </div>
+                </div>
+
+                <!-- Карточка 5 -->
+                <div class="car-card glass animate-on-scroll">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1618843479313-40f8e9c4f0d3" alt="Audi RS e-tron GT" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-brand">Audi</div>
+                        <h3 class="card-title">RS e-tron GT</h3>
+                        <p class="card-desc">Электрический гран-туризмо с Quattro и 637 л.с.</p>
+                        <div class="card-price">от 19 700 000 ₽</div>
+                        <button class="btn-detail" onclick="showDetail(5)">Подробнее →</button>
+                    </div>
+                </div>
+
+                <!-- Карточка 6 -->
+                <div class="car-card glass animate-on-scroll">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1605559424841-5a9a0a0b8a5e" alt="Lamborghini Revuelto" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-brand">Lamborghini</div>
+                        <h3 class="card-title">Revuelto V12</h3>
+                        <p class="card-desc">Новый гибридный V12. 1015 л.с. и непревзойдённый дизайн</p>
+                        <div class="card-price">от 48 000 000 ₽</div>
+                        <button class="btn-detail" onclick="showDetail(6)">Подробнее →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ПОЧЕМУ ВЫБИРАЮТ DREAMDRIVE -->
+    <section id="why" class="section why-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Почему выбирают DreamDrive</h2>
+                <p class="section-subtitle">Наш опыт — ваш идеальный автомобиль</p>
+            </div>
+
+            <div class="features-grid">
+                <!-- 1 -->
+                <div class="feature-card glass animate-on-scroll">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.6-.4-1-1-1h-2M5 17H3c-.6 0-1-.4-1-1v-3c0-.6.4-1 1-1h2"/><path d="M12 17V7"/><circle cx="12" cy="7" r="3"/><path d="M7 17h10"/></svg>
+                    </div>
+                    <h3>Эксклюзивный выбор</h3>
+                    <p>Только лимитированные модели и свежие поставки 2026 года от официальных производителей</p>
+                </div>
+
+                <!-- 2 -->
+                <div class="feature-card glass animate-on-scroll">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <h3>Полная прозрачность</h3>
+                    <p>Честные цены без скрытых платежей. Полная история каждого автомобиля и 5-летняя гарантия</p>
+                </div>
+
+                <!-- 3 -->
+                <div class="feature-card glass animate-on-scroll">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                    </div>
+                    <h3>Мгновенный тест-драйв</h3>
+                    <p>Запишитесь онлайн — и уже через 30 минут вы за рулём своего будущего автомобиля</p>
+                </div>
+
+                <!-- 4 -->
+                <div class="feature-card glass animate-on-scroll">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/></svg>
+                    </div>
+                    <h3>Персональный сервис 24/7</h3>
+                    <p>Ваш личный менеджер, консьерж-сервис и доставка автомобиля в любую точку России</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ОТЗЫВЫ -->
+    <section id="reviews" class="section reviews-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Что говорят наши клиенты</h2>
+                <p class="section-subtitle">Реальные истории настоящих владельцев DreamDrive</p>
+            </div>
+
+            <div class="carousel" id="carousel">
+                <div class="carousel-track" id="carousel-track">
+                    <!-- Отзыв 1 -->
+                    <div class="review-card glass">
+                        <div class="review-header">
+                            <div class="review-avatar">АП</div>
+                            <div>
+                                <h4>Алексей Петров</h4>
+                                <p class="review-car">Porsche 911 Turbo S • 2026</p>
+                            </div>
+                            <div class="review-stars">★★★★★</div>
+                        </div>
+                        <p class="review-text">"Купил Porsche через DreamDrive за 3 дня. От первого звонка до получения ключей — всё на высшем уровне. Сервис, внимание и даже кофе в салоне на уровне 7-звёздочного отеля."</p>
+                    </div>
+
+                    <!-- Отзыв 2 -->
+                    <div class="review-card glass">
+                        <div class="review-header">
+                            <div class="review-avatar">ЕК</div>
+                            <div>
+                                <h4>Елена Ковалёва</h4>
+                                <p class="review-car">Tesla Model S Plaid • 2026</p>
+                            </div>
+                            <div class="review-stars">★★★★★</div>
+                        </div>
+                        <p class="review-text">"Мечтала о Tesla Plaid два года. DreamDrive сделал всё возможным: доставка в Сочи, полная настройка под меня и даже зарядная станция в подарок. Это не просто покупка — это новый уровень жизни."</p>
+                    </div>
+
+                    <!-- Отзыв 3 -->
+                    <div class="review-card glass">
+                        <div class="review-header">
+                            <div class="review-avatar">МЛ</div>
+                            <div>
+                                <h4>Максим Лебедев</h4>
+                                <p class="review-car">Mercedes S-Class • 2026</p>
+                            </div>
+                            <div class="review-stars">★★★★★</div>
+                        </div>
+                        <p class="review-text">"S-Class — это любовь с первого взгляда. Команда DreamDrive помогла выбрать идеальную комплектацию, оформила кредит за 40 минут и организовала доставку с водителем. Лучший автосалон, в котором я был."</p>
+                    </div>
+                </div>
+
+                <!-- Управление каруселью -->
+                <button class="carousel-btn carousel-prev" id="prev-btn" aria-label="Предыдущий отзыв">‹</button>
+                <button class="carousel-btn carousel-next" id="next-btn" aria-label="Следующий отзыв">›</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- КОНТАКТЫ И ТЕСТ-ДРАЙВ -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Форма -->
+                <div class="form-block glass animate-on-scroll">
+                    <h2 class="form-title">Запишитесь на тест-драйв прямо сейчас</h2>
+                    <p class="form-subtitle">Мы свяжемся с вами в течение 15 минут</p>
+                    
+                    <form id="test-drive-form">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Ваше имя" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" placeholder="+7 (999) 123-45-67" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Ваш email">
+                        </div>
+                        <div class="form-group">
+                            <select id="model-select" required>
+                                <option value="">Выберите модель</option>
+                                <option value="Mercedes S-Class">Mercedes-Benz S-Class</option>
+                                <option value="BMW i7">BMW i7</option>
+                                <option value="Porsche 911">Porsche 911 Turbo S</option>
+                                <option value="Tesla Model S">Tesla Model S Plaid</option>
+                                <option value="Audi RS e-tron GT">Audi RS e-tron GT</option>
+                                <option value="Lamborghini Revuelto">Lamborghini Revuelto</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary form-submit">Записаться на тест-драйв</button>
+                    </form>
+                </div>
+
+                <!-- Инфо + карта -->
+                <div class="info-block animate-on-scroll">
+                    <div class="glass contact-info">
+                        <h3>Наши салоны</h3>
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <div>
+                                <strong>Москва</strong><br>
+                                Тверская ул., 15, бизнес-центр «DreamTower»<br>
+                                <a href="tel:+74951234567">+7 (495) 123-45-67</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <div>
+                                <strong>Санкт-Петербург</strong><br>
+                                Невский проспект, 48<br>
+                                <a href="tel:+78121234567">+7 (812) 123-45-67</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">🕒</span>
+                            <div>Ежедневно с 09:00 до 22:00</div>
+                        </div>
+                        
+                        <!-- Простой блок-карта (статичный премиум-вид) -->
+                        <div class="map-placeholder">
+                            <div class="map-inner">
+                                <div class="map-pin">📍</div>
+                                <p class="map-text">Москва • Санкт-Петербург • Сочи<br>Готовы к доставке в любой город России</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">DreamDrive</div>
+                    <p class="footer-desc">Премиум-автомобили будущего уже сегодня</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Навигация</h4>
+                    <a href="#popular">Каталог</a>
+                    <a href="#why">О нас</a>
+                    <a href="#reviews">Отзывы</a>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Услуги</h4>
+                    <a href="#">Тест-драйв</a>
+                    <a href="#">Кредит и лизинг</a>
+                    <a href="#">Trade-in</a>
+                    <a href="#">Сервис 24/7</a>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Контакты</h4>
+                    <a href="tel:+74951234567">+7 (495) 123-45-67</a>
+                    <a href="mailto:hello@dreamdrive.ru">hello@dreamdrive.ru</a>
+                    <div class="socials">
+                        <a href="#" aria-label="Instagram">📸</a>
+                        <a href="#" aria-label="Telegram">✈️</a>
+                        <a href="#" aria-label="WhatsApp">💬</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 DreamDrive. Все права защищены.</p>
+                <p class="footer-legal">Политика конфиденциальности • Условия использования</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // === ОСНОВНОЙ JS (минимальный, как требовалось) ===
+        
+        // 1. Переключение темы + localStorage
+        function initTheme() {
+            const toggle = document.getElementById('theme-toggle')
+            const body = document.body
+            
+            // Загрузка сохранённой темы
+            if (localStorage.getItem('theme') === 'dark') {
+                body.classList.add('dark')
+                toggle.classList.add('dark')
+            }
+            
+            toggle.addEventListener('click', () => {
+                body.classList.toggle('dark')
+                toggle.classList.toggle('dark')
+                
+                // Сохранение выбора
+                if (body.classList.contains('dark')) {
+                    localStorage.setItem('theme', 'dark')
+                } else {
+                    localStorage.setItem('theme', 'light')
+                }
+            })
+        }
+        
+        // 2. Бургер-меню
+        function initBurger() {
+            const burger = document.getElementById('burger')
+            const menu = document.getElementById('nav-menu')
+            const navContainer = document.querySelector('.nav-container')
+            
+            burger.addEventListener('click', () => {
+                burger.classList.toggle('active')
+                menu.classList.toggle('active')
+                navContainer.classList.toggle('menu-open')
+            })
+            
+            // Закрытие при клике на ссылки
+            const links = document.querySelectorAll('.nav-link')
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    burger.classList.remove('active')
+                    menu.classList.remove('active')
+                    navContainer.classList.remove('menu-open')
+                })
+            })
+        }
+        
+        // 3. Плавный скролл к секциям
+        function initSmoothScroll() {
+            const links = document.querySelectorAll('a[href^="#"]')
+            links.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    const targetId = this.getAttribute('href').substring(1)
+                    const target = document.getElementById(targetId)
+                    
+                    if (target) {
+                        e.preventDefault()
+                        const navbarHeight = document.querySelector('.navbar').offsetHeight
+                        const targetPosition = target.getBoundingClientRect().top + window.scrollY - navbarHeight - 20
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        })
+                    }
+                })
+            })
+        }
+        
+        // 4. Анимации при скролле (Intersection Observer)
+        function initScrollAnimations() {
+            const elements = document.querySelectorAll('.animate-on-scroll')
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible')
+                    }
+                })
+            }, {
+                threshold: 0.15,
+                rootMargin: "0px 0px -50px 0px"
+            })
+            
+            elements.forEach(el => observer.observe(el))
+        }
+        
+        // 5. Карусель отзывов
+        function initCarousel() {
+            const track = document.getElementById('carousel-track')
+            const prevBtn = document.getElementById('prev-btn')
+            const nextBtn = document.getElementById('next-btn')
+            let currentIndex = 0
+            const cards = track.children
+            const totalCards = cards.length
+            
+            function updateCarousel() {
+                track.style.transform = `translateX(-${currentIndex * 100}%)`
+            }
+            
+            nextBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % totalCards
+                updateCarousel()
+            })
+            
+            prevBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + totalCards) % totalCards
+                updateCarousel()
+            })
+            
+            // Автопрокрутка каждые 6 секунд
+            let autoInterval = setInterval(() => {
+                currentIndex = (currentIndex + 1) % totalCards
+                updateCarousel()
+            }, 6000)
+            
+            // Останавливаем автопрокрутку при наведении
+            const carousel = document.getElementById('carousel')
+            carousel.addEventListener('mouseenter', () => clearInterval(autoInterval))
+            carousel.addEventListener('mouseleave', () => {
+                autoInterval = setInterval(() => {
+                    currentIndex = (currentIndex + 1) % totalCards
+                    updateCarousel()
+                }, 6000)
+            })
+        }
+        
+        // 6. Обработка формы тест-драйва
+        function initForm() {
+            const form = document.getElementById('test-drive-form')
+            
+            form.addEventListener('submit', function (e) {
+                e.preventDefault()
+                
+                // Симуляция отправки
+                const submitBtn = form.querySelector('.form-submit')
+                const originalText = submitBtn.textContent
+                
+                submitBtn.style.transition = 'all 0.3s ease'
+                submitBtn.textContent = 'Отправляем...'
+                submitBtn.disabled = true
+                
+                setTimeout(() => {
+                    alert('✅ Спасибо! Ваша заявка на тест-драйв принята.\n\nМенеджер DreamDrive свяжется с вами в ближайшие 15 минут.')
+                    form.reset()
+                    submitBtn.textContent = originalText
+                    submitBtn.disabled = false
+                }, 1400)
+            })
+        }
+        
+        // 7. Параллакс-эффект на hero (лёгкий tilt при движении мыши)
+        function initHeroParallax() {
+            const heroBg = document.getElementById('hero-bg')
+            
+            document.addEventListener('mousemove', (e) => {
+                if (window.innerWidth < 768) return // только на десктопе
+                
+                const x = (e.clientX / window.innerWidth) * 20 - 10
+                const y = (e.clientY / window.innerHeight) * 20 - 10
+                
+                heroBg.style.transform = `translate(${x}px, ${y}px) scale(1.05)`
+            })
+            
+            // Возврат в исходное положение
+            document.addEventListener('mouseleave', () => {
+                heroBg.style.transform = `translate(0, 0) scale(1)`
+            })
+        }
+        
+        // 8. Показ деталей модели (демо)
+        window.showDetail = function (id) {
+            const messages = {
+                1: "Mercedes-Benz S-Class S 500 4MATIC 2026 — флагман с уровнем комфорта, которого вы ещё не видели.",
+                2: "BMW i7 xDrive60 — 650 км хода, Crystal Headlights и искусственный интеллект внутри.",
+                3: "Porsche 911 Turbo S — 2,7 секунды до сотни. Легенда, которая стала ещё лучше.",
+                4: "Tesla Model S Plaid — 1020 л.с. и разгон быстрее, чем у большинства суперкаров.",
+                5: "Audi RS e-tron GT — Quattro, 637 л.с. и невероятный дизайн 2026 года.",
+                6: "Lamborghini Revuelto — первый V12-гибрид Lamborghini. 1015 л.с. чистого драйва."
+            }
+            
+            alert(`🔥 ${messages[id]}\n\nХотите записаться на тест-драйв этой модели? Перейдите в раздел «Контакты».`)
+        }
+        
+        // Инициализация всего при загрузке
+        window.addEventListener('load', () => {
+            initTheme()
+            initBurger()
+            initSmoothScroll()
+            initScrollAnimations()
+            initCarousel()
+            initForm()
+            initHeroParallax()
+            
+            // Дополнительная micro-interaction на navbar при скролле
+            const navbar = document.getElementById('navbar')
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 80) {
+                    navbar.classList.add('scrolled')
+                } else {
+                    navbar.classList.remove('scrolled')
+                }
+            })
+            
+            console.log('%c🚀 DreamDrive сайт успешно загружен! Готов к использованию в 2026 году.', 'color:#00d4ff; font-family:monospace; font-size:12px')
+        })
+    </script>
+</body>
+</html>
